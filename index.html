@@ -8,32 +8,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="heading">
-            <h1 class="head" style="font-weight: bold;">
-                Is your birthday lucky?
-            </h1>
-        </div>
 
-        <div class="container-second">
-
+    <nav class="navigation">
+        <div class="nav-brand">Is your birthday lucky?</div>
+    </nav>
+    <div class="container container-center">
+        <div class="row3">
             <label for="date-birth">Date of birth</label>
-            <div class="row">
+            </div>
+            <div class="row container-center">
+                <label for="date-birth">Date of birth</label>
                 <input type="date" name="" id="date-birth">
             </div>
 
             <div class="row">
-                <input type="number" id="lucky-number" placeholder="Lucky number">
+                <input class="row container-center" type="number" id="lucky-number" placeholder="Lucky number">
             </div>
 
-            <div class="btn">
+            <div class="row container-center">
                 <button id="check-number">Check!</button>
             </div>
-        </div>
+            <div class="note">
+                <div class="msg">*We don't store your data</div>
+            </div>
 
 
         <div class="message error" style="">
-           <p id="message-field">message</p>
+           <p class="message-field">message</p>
+        </div>
+
+        <div class="output-msg">
         </div>
 
     </div>

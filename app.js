@@ -1,11 +1,12 @@
 const dateOfBirth = document.querySelector("#date-birth");
 const luckyNumber = document.querySelector("#lucky-number");
 const checkNumber = document.querySelector("#check-number");
-const message = document.querySelector("#message-Field");
+const message = document.querySelector(".message-field");
 const error = document.querySelector(".error");
+const output = document.querySelector(".output-msg");
 
 checkNumber.addEventListener('click',() => {
-    console.log(dateOfBirth.value,luckyNumber.value);
+    //console.log(dateOfBirth.value,luckyNumber.value);
     birthdayIsLucky();
 });
 
@@ -27,20 +28,39 @@ function birthdayIsLucky(){
     const luckyNo = luckyNumber.value;
     const dateBirth = dateOfBirth.value;
 
-    if(luckyNo =="" || dateBirth == ""){
-        console.log("Invalid");
+    if(luckyNo && dateBirth ){
+        if(Number(luckyNo.value) >= 0){
+            error.style.display = "flex";
+            message.innerText = "Please provide valid number!";
+            message.style = "color: red";
+        } else {
+            const sum = calculateSum(dateBirth);
+
+            if(sum%luckyNo === 0){
+                output.innerText = "Yayy! Your birthday is lucky!";
+            } else {
+                output.innerText = "Oops! Your birthday is not lucky :(";
+            }
+        
+        }
+        //console.log("Invalid");
+    } else {
         error.style.display = "flex";
         message.innerText = "Please provide both values!";
         message.style = "color: red";
     }
    
     
-    const sum = calculateSum(dateBirth);
-
-    if(sum%luckyNo === 0){
-
-    } else {
-        
-    }
-
+    //
 };
+
+luckyNumber.addEventListener('click', ()=>{
+    message.innerText = "";
+    output.innerText = "";
+});
+
+dateOfBirth.addEventListener('click',()=>{
+
+    message.innerText = "";
+    output.innerText = "";
+});
