@@ -10,13 +10,14 @@
 <body>
 
     <nav class="navigation">
-        <div class="nav-brand">Is your birthday lucky?</div>
+        <div class="nav-brand">Lucky Birthday</div>
     </nav>
     <div class="container container-center">
-        <div class="row3">
-            <label for="date-birth">Date of birth</label>
-            </div>
-            <div class="row container-center">
+
+        <div class="row1">
+            <div class="column column2"><h1>Is your birthday lucky?</h1></div>
+        </div>
+            <div class="row container-center" style="flex-direction: column; justify-content: center; align-items: center;">
                 <label for="date-birth">Date of birth</label>
                 <input type="date" name="" id="date-birth">
             </div>
@@ -24,7 +25,9 @@
             <div class="row">
                 <input class="row container-center" type="number" id="lucky-number" placeholder="Lucky number">
             </div>
-
+            <div class="message error" style="">
+                <p class="message-field">message</p>
+             </div>
             <div class="row container-center">
                 <button id="check-number">Check!</button>
             </div>
@@ -33,12 +36,12 @@
             </div>
 
 
-        <div class="message error" style="">
-           <p class="message-field">message</p>
+       
+
+        <div class="output-msg error">
+           
         </div>
 
-        <div class="output-msg">
-        </div>
 
     </div>
     <script src="app.js" text="text/javascript"></script>

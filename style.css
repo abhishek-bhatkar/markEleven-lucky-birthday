@@ -27,7 +27,7 @@ body {
     padding: 1rem;
     border-bottom-left-radius: 1rem;
     margin: auto;
-    box-shadow: 0 1px 18px rgba(146, 161, 176, .15);
+    box-shadow: 0 1px 18px rgba(19, 32, 46, 0.15);
     background: #3B82f6;
     color: white;
     padding: 0.5rem 2rem 0.5rem 2rem;
@@ -90,6 +90,26 @@ body {
 
 }
 
+.output-msg {
+    border: 0.2px solid var(--pink);
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    width: 40%;
+    margin: auto;
+    margin-top: 1rem;
+    background: white;
+    border-radius: 0.3rem;
+    box-shadow: 0 1px 18px rgba(146, 161, 176, .15);
+
+}
+
+.message {
+    color: red;
+    margin-top: 1rem;
+    justify-content: space-around;
+}
+
 .column2 {
     margin: auto;
     width: 70%;
@@ -121,21 +141,6 @@ button {
     cursor: pointer;
 }
 
-.styled-table {
-    padding: 2rem 4rem;
-    background: white;
-    border-radius: 1rem;
-    margin-top: 3rem;
-    box-shadow: 0 1px 18px rgba(146, 161, 176, .15);
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 10vh;
-}
-
-.styled-table th,
-.styled-table td {
-    padding: 3px 5px;
-}
 
 .row2 {
     display: none;

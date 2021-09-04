@@ -6,7 +6,7 @@ const error = document.querySelector(".error");
 const output = document.querySelector(".output-msg");
 
 checkNumber.addEventListener('click',() => {
-    //console.log(dateOfBirth.value,luckyNumber.value);
+    console.log(dateOfBirth.value,luckyNumber.value);
     birthdayIsLucky();
 });
 
@@ -19,7 +19,7 @@ function calculateSum(dateBirth){
             sum += parseInt(str[i]);
         }
     }
-    //console.log(sum);
+    console.log(sum);
     return sum;
 };
 
@@ -32,13 +32,14 @@ function birthdayIsLucky(){
         if(Number(luckyNo.value) >= 0){
             error.style.display = "flex";
             message.innerText = "Please provide valid number!";
-            message.style = "color: red";
         } else {
             const sum = calculateSum(dateBirth);
 
             if(sum%luckyNo === 0){
+                output.style.display = "flex";
                 output.innerText = "Yayy! Your birthday is lucky!";
             } else {
+                output.style.display = "flex";
                 output.innerText = "Oops! Your birthday is not lucky :(";
             }
         
@@ -57,10 +58,12 @@ function birthdayIsLucky(){
 luckyNumber.addEventListener('click', ()=>{
     message.innerText = "";
     output.innerText = "";
+    output.style.display = "none";
 });
 
 dateOfBirth.addEventListener('click',()=>{
 
     message.innerText = "";
     output.innerText = "";
+    output.style.display = "none";
 });
