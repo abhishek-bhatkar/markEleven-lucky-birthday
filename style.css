@@ -28,7 +28,7 @@ body {
     border-bottom-left-radius: 1rem;
     margin: auto;
     box-shadow: 0 1px 18px rgba(19, 32, 46, 0.15);
-    background: #3B82f6;
+    background: var(--primary-color);
     color: white;
     padding: 0.5rem 2rem 0.5rem 2rem;
     max-width: 1100px;
@@ -155,6 +155,18 @@ button {
 
 .mt-3 {
     margin-top: 2rem;
+}
+
+
+footer {
+    background-color: rgb(37, 99, 235);
+    color: white;
+    padding: 2.85rem;
+    text-align: center;
+    border-top-right-radius: 1rem;
+    box-shadow: rgb(229, 231, 235) 0px 1px 25px;
+    margin: 6rem auto 0rem;
+
 }
 
 @media (max-width: 500px) {
